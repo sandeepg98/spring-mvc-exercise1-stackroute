@@ -3,6 +3,6 @@
 
  <html>
     <body>
-        <h2>Welcome to StackRoute : ${message}</h2>
+        <h2>Welcome to StackRoute : ${name}</h2>
     </body>
  </html>

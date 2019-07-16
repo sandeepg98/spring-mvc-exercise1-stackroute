@@ -1,14 +1,24 @@
 package com.stackroute;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
 
-    private String name;
+    @Autowired
+    private StringBuilder name;
 
-    public User(String name) {
+    public User(){
+
+    }
+
+    public User(StringBuilder name) {
         this.name = name;
     }
 
-    public String getName() {
+    public StringBuilder getName() {
         return name;
     }
 
@@ -17,5 +27,11 @@ public class User {
         return "User{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    @Bean
+    public StringBuilder name() {
+        StringBuilder name = new StringBuilder("Sandeep Grover");
+        return name;
     }
 }
